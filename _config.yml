@@ -67,7 +67,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : true # true, false (default)
+  hide                   : # true, false (default)
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -119,21 +119,21 @@ author:
   location         : 
   email            : 
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "CV"
-      icon: "fas fa-fw fa-link"
-      url: "assets/documents/CV.pdf"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mason-o-price"
+    - label: "Linkedin"
+      icon: "fa fa-linkedin"
+      url: "https://www.linkedin.com/in/mason-price-29057622b/"
+    - label: "CV"
+      icon: "fas fa-fw fa-link"
+      url: "assets/documents/CV.pdf"
     - label: "ORCiD"
       icon: "fa-brands fa-orcid"
       url: "https://orcid.org/0009-0009-6706-9671"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:masonprice@brandeis.edu"
+      # url: "mailto:masonprice@brandeis.edu"
 
 # Site Footer
 footer:
