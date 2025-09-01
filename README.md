@@ -1,3 +1,3 @@
-[Personal Website](mason-o-price.github.io/mason-o-price/)
+[Personal Website](https://mason-o-price.github.io/mason-o-price/)
 
 Made using the Minimal Mistakes theme. 
