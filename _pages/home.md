@@ -1,5 +1,6 @@
 ---
 layout: splash
+permalink: /
 feature_row:
   - image_path: /assets/images/Toroid_Icon.png
     title: "**From toroids to helical tubules: Kirigami-inspired programmable assembly of two-periodic curved crystals**"
