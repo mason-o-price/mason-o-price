@@ -1,16 +1,21 @@
-<p>TEST PAPERS SECTION</p>
+<p>HELLO FROM PAPERS INCLUDE</p> <!-- Test that include is being used -->
 
 <section id="papers" class="home-section">
   <div class="container">
     <h2>Papers</h2>
-  <div class="grid">
-    {% for paper in site.papers %}
-      <div class="paper-card">
-        <img src="{{ paper.image }}" alt="{{ paper.title }}">
-        <h3>{{ paper.title }}</h3>
-        <p>{{ paper.authors }}</p>
-      </div>
-    {% endfor %}
-  </div>
+
+    {% if site.papers.size == 0 %}
+      <p>No papers detected!</p>
+    {% endif %}
+
+    <div class="grid">
+      {% for paper in site.papers %}
+        <div class="paper-card">
+          <img src="{{ paper.image }}" alt="{{ paper.title }}">
+          <h3>{{ paper.title }}</h3>
+          <p>{{ paper.authors }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
