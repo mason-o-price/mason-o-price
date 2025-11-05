@@ -1,6 +1,19 @@
-<article class="paper">
-  <img src="{{ page.image }}" alt="{{ page.title }}">
-  <h3>{{ page.title }}</h3>
-  <p><strong>Authors:</strong> {{ page.authors }}</p>
-  <p>{{ content }}</p>
-</article>
+<section id="papers" class="home-section">
+  <div class="container">
+    <h2>Papers</h2>
+
+    {% if site.papers.size == 0 %}
+      <p>No papers detected!</p>
+    {% endif %}
+
+    <div class="grid">
+      {% for paper in site.papers %}
+        <div class="paper-card">
+          <img src="{{ paper.image }}" alt="{{ paper.title }}">
+          <h3>{{ paper.title }}</h3>
+          <p>{{ paper.authors }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
