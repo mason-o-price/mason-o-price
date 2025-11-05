@@ -118,7 +118,7 @@ collections:
 author:
   name             : "Mason Price"
   avatar           : "assets/images/headshot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Scientific computing, computational math, applications of differential geometry"
+  bio              : ""
   location         : 
   email            : 
   links:
