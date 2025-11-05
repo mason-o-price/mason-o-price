@@ -110,6 +110,9 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
+collections:
+  papers:
+    output: true
 
 # Site Author
 author:
