@@ -1,6 +1,79 @@
-<article class="paper">
-  <img src="{{ page.image }}" alt="{{ page.title }}">
-  <h3>{{ page.title }}</h3>
-  <p><strong>Authors:</strong> {{ page.authors }}</p>
-  <p>{{ content }}</p>
-</article>
+<section id="papers" class="home-section">
+  <div class="container">
+    <h2>Papers</h2>
+
+    {% if site.papers and site.papers.size > 0 %}
+      <div class="papers-grid">
+        {% for paper in site.papers %}
+          <div class="paper-card">
+            {% if paper.image %}
+              <img class="paper-image" src="{{ paper.image }}" alt="{{ paper.title }}">
+            {% endif %}
+            <div class="paper-info">
+              <h3 class="paper-title">
+                <a href="{{ paper.link }}" target="_blank">{{ paper.title }}</a>
+              </h3>
+              <p class="paper-authors">{{ paper.authors }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No papers detected!</p>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .papers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .paper-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .paper-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .paper-image {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .paper-info {
+    flex: 1;
+  }
+
+  .paper-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .paper-title a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .paper-title a:hover {
+    text-decoration: underline;
+  }
+
+  .paper-authors {
+    margin: 0.5rem 0 0 0;
+    color: #666;
+    font-size: 0.95em;
+  }
+</style>
