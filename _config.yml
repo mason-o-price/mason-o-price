@@ -18,7 +18,6 @@ minimal_mistakes_skin    : "contrast" # "default" "air", "aqua", "contrast", "da
 collections:
   papers:
     output: true
-    permalink: /:collection/:path/
 
 
 # Site Settings
